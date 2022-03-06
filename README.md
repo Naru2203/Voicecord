@@ -9,6 +9,8 @@ A Code written by Python that helps you to keep your account 24/7 on Voice Chann
 
 • Fork the repo
 
+• Clone to [replit](https://replit.com)
+
 • Install PyNaCl using the Package Manager
 
 • Add TOKEN to env file
