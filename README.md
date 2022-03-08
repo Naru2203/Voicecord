@@ -31,8 +31,8 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    voice_channel = client.get_channel(add here) #<= add id voice channel
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="The Forest Grand"))
+    voice_channel = client.get_channel(add here) #<= add specific id voice channel to connect 
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Lofi"))
     await voice_channel.connect()
     print('Logged in as {0.user}'.format(client))
     print('Successful connect to voice channel.')
