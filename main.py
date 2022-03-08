@@ -19,7 +19,7 @@ async def on_ready():
   
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Lofi"))
   
-    voice_channel = client.get_channel(Your id channel)
+    voice_channel = client.get_channel(add here) #<= add specific id voice channel to connect 
     await voice_channel.connect()
   
     print('Logged in as {0.user}'.format(client))
