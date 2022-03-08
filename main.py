@@ -17,7 +17,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
   
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Voicecord"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Lofi"))
   
     voice_channel = client.get_channel(Your id channel)
     await voice_channel.connect()
