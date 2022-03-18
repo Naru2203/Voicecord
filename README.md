@@ -35,7 +35,7 @@ async def on_ready():
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Lofi"))
     await voice_channel.connect()
     print('Logged in as {0.user}'.format(client))
-    print('Successful connect to voice channel.')
+    print('Connected to voice channel {}'.format(voice_channel))
   
 keep_alive()
 client.run(os.getenv("TOKEN"), bot = False)
