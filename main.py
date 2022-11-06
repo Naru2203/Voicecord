@@ -1,8 +1,12 @@
 import os
 import time
-import PyNaCl 
-import discord
 from keep_alive import keep_alive
+try:
+	import discord
+except:
+	from setup import install
+	install()
+	import discord
 
 print("""\
 ██╗░░░██╗░█████╗░██╗░█████╗░███████╗░█████╗░░█████╗░██████╗░██████╗░
@@ -29,5 +33,3 @@ async def on_ready():
     
 keep_alive()
 client.run(Token, bot = False)
-
-
