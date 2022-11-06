@@ -1,6 +1,7 @@
 import os
-import discord
 import time
+import PyNaCl 
+import discord
 from keep_alive import keep_alive
 
 print("""\
