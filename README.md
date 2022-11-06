@@ -48,7 +48,6 @@ client.run(Token, bot = False)
 
 Use [uptimerobot.com](https://uptimerobot.com) to make your repl online 24/7.
 
-Lastest version: See in version.txt
 </br>
 
 ----
