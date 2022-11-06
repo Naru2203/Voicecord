@@ -11,8 +11,6 @@ A Code written by Python that helps you to keep your account 24/7 on Voice Chann
 
 • Clone to [replit](https://replit.com)
 
-• Install PyNaCl using the Package Manager
-
 ---
 
 The main.py is the main file. keep_alive.py prevents your repl from going to sleep. (If you have a replit hacker plan, then you can delete this file and paste this code inside the main.py file :
@@ -20,11 +18,15 @@ The main.py is the main file. keep_alive.py prevents your repl from going to sle
 
 ```py
 import os
-import discord
 import time
 from keep_alive import keep_alive
-
-time.sleep(0.5)
+try:
+	import discord
+except:
+	from setup import install
+	install()
+	import discord
+    
 client = discord.Client(intents=discord.Intents.default())
 Token = input("Please Enter Your Token: ")
 Id = int(input("Please Enter Your Channel ID: "))
@@ -37,11 +39,10 @@ async def on_ready():
     await voice_channel.connect()
   
     print('Logged in as {0.user}'.format(client))
-    print('Connected to voice channel {}'.format(voice_channel))
+    print('Connected to voice channel: {}'.format(voice_channel))
     
 keep_alive()
 client.run(Token, bot = False)
-
 
 ```
 
