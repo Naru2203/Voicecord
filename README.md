@@ -13,10 +13,6 @@ A Code written by Python that helps you to keep your account 24/7 on Voice Chann
 
 • Install PyNaCl using the Package Manager
 
-• Add TOKEN to env file
-
-• Add id channel to the script
-
 ---
 
 The main.py is the main file. keep_alive.py prevents your repl from going to sleep. (If you have a replit hacker plan, then you can delete this file and paste this code inside the main.py file :
@@ -25,20 +21,28 @@ The main.py is the main file. keep_alive.py prevents your repl from going to sle
 ```py
 import os
 import discord
+import time
 from keep_alive import keep_alive
 
-client = discord.Client()
+time.sleep(0.5)
+client = discord.Client(intents=discord.Intents.default())
+Token = input("Please Enter Your Token: ")
+Id = int(input("Please Enter Your Channel ID: "))
+
 
 @client.event
 async def on_ready():
-    voice_channel = client.get_channel(add here) #<= add specific id voice channel to connect 
+    voice_channel = client.get_channel(Id) 
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Lofi"))
     await voice_channel.connect()
+  
     print('Logged in as {0.user}'.format(client))
     print('Connected to voice channel {}'.format(voice_channel))
-  
+    
 keep_alive()
-client.run(os.getenv("TOKEN"), bot = False)
+client.run(Token, bot = False)
+
+
 ```
 
 Use [uptimerobot.com](https://uptimerobot.com) to make your repl online 24/7.
@@ -48,4 +52,4 @@ Lastest version: See in version.txt
 
 ----
 
->Voicecord © 2022 by Naru#3078
+>Voicecord © 2022 by Naru#9262
