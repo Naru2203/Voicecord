@@ -1,4 +1,9 @@
-from flask import Flask
+try:
+	from flask import Flask
+except:
+	from setup import install
+	install()
+	from flask import Flask
 from threading import Thread
 
 app = Flask('')
