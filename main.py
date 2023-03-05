@@ -1,9 +1,12 @@
 import os
 import time
 from keep_alive import keep_alive
-from setup import install
-install()
-import discord
+try:
+    import discord
+except:
+    from setup import install
+    install()
+    import discord
 
 print("""\
 ██╗░░░██╗░█████╗░██╗░█████╗░███████╗░█████╗░░█████╗░██████╗░██████╗░
